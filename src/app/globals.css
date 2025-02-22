@@ -17,5 +17,12 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-bricolage-grotesque);
+}
+
+.hero-section {
+  background: 
+    url('../../public/assets/img/grid-2.svg') no-repeat top center,
+    url('../../public/assets/img/gradient.png') no-repeat bottom center;
+    background-size: contain, cover;
 }

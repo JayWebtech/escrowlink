@@ -10,6 +10,13 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#96EA63",
+        secondary: "#A8FE3B"
+      },
+      fontFamily: {
+        'sans': ['var(--font-geist-sans)', 'sans-serif'],
+        'mono': ['var(--font-geist-mono)', 'monospace'],
+        'bricolage': ['var(--font-bricolage-grotesque)', 'sans-serif'],
       },
     },
   },
