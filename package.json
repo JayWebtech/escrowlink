@@ -9,11 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@rainbow-me/rainbowkit": "^2.2.4",
+    "@tanstack/react-query": "^5.66.9",
+    "ethers": "^6.13.5",
     "framer-motion": "^12.4.7",
+    "lucide-react": "^0.476.0",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-intersection-observer": "^9.15.1"
+    "react-hot-toast": "^2.5.2",
+    "react-intersection-observer": "^9.15.1",
+    "viem": "^2.23.5",
+    "wagmi": "^2.14.12"
   },
   "devDependencies": {
     "postcss": "^8",

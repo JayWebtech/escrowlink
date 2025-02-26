@@ -3,9 +3,15 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Button from "../Form/Button";
 import Link from "next/link";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
+import ConnectWalletButton from "../Form/ConnectWalletButton";
+import AccountButton from "../Form/AccountButton";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <div className="container mx-auto px-4 sm:px-10 md:px-8 lg:px-16 pt-5">
@@ -72,14 +78,24 @@ const Navbar = () => {
             </motion.li>
           </ul>
         </motion.div>
-        <motion.div
-          className="hidden md:block"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-        >
-          <Button>Connect wallet</Button>
-        </motion.div>
+        <div className="flex gap-5">
+          <motion.div
+            className="hidden md:block"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 1 }}
+          >
+            <AccountButton />
+          </motion.div>
+          <motion.div
+            className="hidden md:block"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 1 }}
+          >
+            <ConnectWalletButton />
+          </motion.div>
+        </div>
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="text-white">
             {isOpen ? "Close" : "Menu"}
@@ -119,9 +135,10 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <Button>
-                Connect wallet
-              </Button>
+              <AccountButton />
+            </li>
+            <li>
+              <ConnectWalletButton />
             </li>
           </ul>
         </motion.div>
